@@ -1,0 +1,610 @@
+{
+	"info": {
+		"_postman_id": "42b86a82-9632-44ac-b789-19d218cd9c7a",
+		"name": "BroadbandBillingAndPaymentSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29493896"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Add New Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Admin/add-admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Admin",
+								"add-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"admin_id\" : \"9b318f32-4814-461b-a313-e0b99e984f43\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Admin/delete-admin/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Admin",
+								"delete-admin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Admin/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Admin/get-all-admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Admin",
+								"get-all-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bill",
+			"item": [
+				{
+					"name": "Get All Bills",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Bill/get-bills",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Bill",
+								"get-bills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay Bill",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bill_id\": \"string\",\r\n  \"payment_mode\": \"string\",\r\n  \"customer_id\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Bill/pay-bill",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Bill",
+								"pay-bill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Bills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Register Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"f_name\": \"string\",\r\n  \"l_name\": \"string\",\r\n  \"address\": \"string\",\r\n  \"phone\": \"9483617096\",\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"stringst\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Customer/register-user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Customer",
+								"register-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Choose Plan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer_id\": \"string\",\r\n  \"plan_id\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Customer/choose-plan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Customer",
+								"choose-plan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"f_name\": \"string\",\r\n  \"l_name\": \"string\",\r\n  \"address\": \"string\",\r\n  \"phone\": \"stringstri\",\r\n  \"email\": \"user@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Customer/update-profile/id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Customer",
+								"update-profile",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aniruddha@yahoo.com\",\r\n    \"password\": \"Admin@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Customer/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Customer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"current_password\": \"Admin@123\",\r\n  \"new_password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Customer/change-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Customer",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Customer/get-customer-details",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Customer",
+								"get-customer-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Customer/get-all-customer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Customer",
+								"get-all-customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feedback",
+			"item": [
+				{
+					"name": "Add Feedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"review\": \"string\",\r\n  \"rating\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Feedback/add-feedback",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Feedback",
+								"add-feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reply to a Feedback",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"feedback_id\": \"string\",\r\n  \"reply\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Feedback/reply-feedback",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Feedback",
+								"reply-feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Feedbacks of User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Feedback/get-all-feedbacks-user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Feedback",
+								"get-all-feedbacks-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plan",
+			"item": [
+				{
+					"name": "Add New Plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 0,\r\n  \"description\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TarrifPlan/add-new-plan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TarrifPlan",
+								"add-new-plan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/TarrifPlan/get-all-plans",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TarrifPlan",
+								"get-all-plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Plan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tarrif_plan_id\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TarrifPlan/delete-plan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TarrifPlan",
+								"delete-plan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Plan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TarrifPlan/update-plan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TarrifPlan",
+								"update-plan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Get Landing Page Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/home-page",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"home-page"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
